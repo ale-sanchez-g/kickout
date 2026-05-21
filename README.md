@@ -263,8 +263,8 @@ KickOut supports all 16 host city stadiums across 3 countries:
 
 |Name                            |Role                                                |Location         |
 |--------------------------------|----------------------------------------------------|-----------------|
-|**Alejandro Sanchez Giraldo**   |Architecture · Dynatrace · SLO Strategy · Submission|Sydney, Australia|
-|**Backend Engineer**            |Vertex AI · FastAPI · Cloud Run · OTel              |Nigeria          |
+|@ale-san-g |Architecture · Dynatrace · SLO Strategy · Submission|Sydney, Australia|
+|@festusoa  |Vertex AI · FastAPI · Cloud Run · OTel              |Nigeria          |
 |**Claude Code + GitHub Copilot**|React Frontend · PWA · Chat UI                      |🤖                |
 
 -----
