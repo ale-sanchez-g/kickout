@@ -7,6 +7,7 @@ import { TypingIndicator } from './components/TypingIndicator';
 import { QuickSelect } from './components/QuickSelect';
 import { EscapeMap } from './components/EscapeMap';
 import { LANGUAGES } from './data/languages';
+import fifaLogo from './tournaments_fifa-world-cup-2026--white_256x256.football-logos.cc.png';
 
 const INITIAL_MESSAGE: Message = {
   id: 'init-1',
@@ -172,7 +173,11 @@ export default function App() {
           <div className="flex items-center justify-between mt-1">
             <div className="flex items-center gap-3">
               <div className="bg-dark-900 border border-dark-600 p-2 rounded-xl shadow-inner">
-                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-brand-neon to-brand-cyan">26</span>
+                <img
+                  src={fifaLogo}
+                  alt="FIFA World Cup 2026 logo"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white leading-tight tracking-wider uppercase">KickOut</h1>
