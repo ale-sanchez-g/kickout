@@ -49,13 +49,48 @@ You can modify the values in `backend/.env.local` if you need to change them.
 
 ### Frontend Environment Variables
 
-The frontend can optionally define:
+Create `frontend/.env.local` with:
 
-*   `VITE_BACKEND_URL`: Absolute URL for the backend proxy (for example, `http://localhost:5000`).
+*   `VITE_API_KEY`: Gemini key used by the frontend SDK.
+*   `VITE_BACKEND_URL`: Absolute URL for the backend proxy.
 
-If omitted, the frontend uses relative paths (`/api-proxy` and `/ws-proxy`), which works with the Vite dev server proxy.
-
-To install dependencies and run your Google Cloud Vertex AI Studio App locally, execute the following command:
+Recommended local value:
 
 ```bash
-npm install && npm run dev
+VITE_API_KEY=your-gemini-api-key
+VITE_BACKEND_URL=http://127.0.0.1:5000
+```
+
+Using `127.0.0.1` avoids `localhost` IPv6/IPv4 mismatches on some machines.
+
+### Backend Environment Variables
+
+Ensure `backend/.env.local` contains valid values for:
+
+*   `API_BACKEND_PORT` (typically `5000`)
+*   `API_PAYLOAD_MAX_SIZE`
+*   `GOOGLE_CLOUD_LOCATION`
+*   `GOOGLE_CLOUD_PROJECT`
+*   `PROXY_HEADER`
+
+### Run Locally
+
+From the repository root:
+
+```bash
+npm install
+npm run dev
+```
+
+This starts:
+
+*   Frontend (Vite)
+*   Backend proxy (Node.js)
+
+If you change any `.env.local` file, restart the corresponding dev server.
+
+Before running the app, make sure ADC is authenticated:
+
+```bash
+gcloud auth application-default login
+```
